@@ -8,7 +8,7 @@ export default function Car(props) {
       
       <img src={props.imagen} alt="Imagen del carro" width="400"/>
 
-      <p>Aqui va la descripcion del carro :)</p>
+      <p>{props.Descripcion}</p>
     </div>
   );
 }

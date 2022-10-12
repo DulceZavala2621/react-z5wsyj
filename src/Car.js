@@ -7,7 +7,10 @@ export default function Car(props) {
     fontFamily: "Sans-serif"
  };
  const estiloH2 = {
-    Color: "Purple"
+    color: "green"
+};
+const estiloH1 = {
+  color: "red"
 };
   return (
   

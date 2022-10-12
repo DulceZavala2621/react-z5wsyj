@@ -6,7 +6,7 @@ export default function App() {
 
   return (
     <div >{/* esto es un comentario*/}
-      <h2>Hello StackBlitz!</h2>
+      <h1 >Hello StackBlitz!</h1>
       <p>Aqui va la descripcion del carro :)</p>
       <Car marca = "Corvette C6" imagen="https://static.retail.autofact.cl/blog/c_img_740x370.s12ttab8kzre30dn.jpg"
       Descripcion ="rojo y rapido"/>

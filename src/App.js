@@ -4,8 +4,8 @@ import Car from "./Car.js"
 
 export default function App() {
   return (
-    <div>
-      <h2>Hello StackBlitz!</h2>
+    <div style= {{backgroundColor: "cyan"}}>
+      <h2 style= {{Color: "gray"}}>Hello StackBlitz!</h2>
       <p>Aqui va la descripcion del carro :)</p>
       <Car marca = "Corvette C6" imagen="https://static.retail.autofact.cl/blog/c_img_740x370.s12ttab8kzre30dn.jpg"
       Descripcion ="rojo y rapido"/>

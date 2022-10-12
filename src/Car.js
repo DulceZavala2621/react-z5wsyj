@@ -6,7 +6,7 @@ export default function Car(props) {
     <div>
       <h1>im car modelo {props.marca}</h1>
       
-      <img src={props.imagen} alt="Imagen del carro" width="400"/>
+      <img src={props.imagen}  width="400"/>
 
       <p>{props.Descripcion}</p>
     </div>

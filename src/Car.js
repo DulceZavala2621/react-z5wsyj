@@ -20,6 +20,15 @@ export default function Car(props) {
   const estiloDivCardContenedor = {
     padding: '0px 16px 16px',
   };
+  const Hacerbeep = (sonido) => {
+    alert(sonido);
+   /* if(props.marca.includes("C6")){
+      alert("Ku-Chaw");
+    }else if (props.marca.includes("L-170"))
+   // alert("beep beep");
+   alert("Mate Tom-Mate");
+  };*/
+}
 
   return (
     <div style={props.style}>
@@ -33,6 +42,8 @@ export default function Car(props) {
           <em>
             <b>Modelo:</b> {props. marca}
           </em>
+          <br></br>
+          <button onClick={()=>Hacerbeep(props.sonido)}> Hacer beep-beep</button>
         </div>
       </div>
     </div>

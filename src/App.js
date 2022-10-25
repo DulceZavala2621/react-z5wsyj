@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Car from "./Car.js"
+import Car from './car/Car.js'
 
 export default function App() {
   //Esta es una variable que representaría al arreglo de objetos JSON que se podrían recuperar desde una API Rest.

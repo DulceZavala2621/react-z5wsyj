@@ -3,17 +3,62 @@ import "./style.css";
 import Car from "./Car.js"
 
 export default function App() {
+  //Esta es una variable que representaría al arreglo de objetos JSON que se podrían recuperar desde una API Rest.
+  const personajesDesdeAPI = [
+    {
+      nombre: 'Rayo McQueen',
+      modelo: 'Chevrolet Corvette C6 de NASCAR',
+      imagen: 'https://static.retail.autofact.cl/blog/c_img_740x370.s12ttab8kzre30dn.jpg',
+      descripcion: 'El auto mas veloz de la serie de peliculas de Cars.',
+      sonido: 'KuChao',
+      anio: '2006',
+    },
+    {
+      nombre: 'Mate',
+      modelo: 'International L-170',
+      imagen:
+        'https://i.pinimg.com/474x/91/2e/d4/912ed4ffcee5c4e018f7ad412cfac861.jpg',
+      descripcion: 'El Compañero fiel del auto veloz de la pelicula Cars.',
+      sonido: 'Mate To-Mate',
+      anio: '1960',
+    },
+  ];
+
+  //variable de estado que nos permitirá almacenar a los personajes a pintar (renderizar).
+  const [personajes, setPersonajes] = useState([]);
+
+  //Un useEffect con dependencia de arreglo vacío [], siempre se dispara una vez al iniciar el componente.
+  useEffect(() => {
+    //TODO: Aquí iria la petición a la API utilizando FETCH y se asignaría la respuesta de la API a la variable personajesDesdeAPI, algo como esto:
+    // personajesDesdeAPI = fetch("http://personajesdecars.com/all")
+    
+    //Se actualiza la variable de estado 'personajes' con los datos recuperados.
+    setPersonajes(personajesDesdeAPI);
+  }, []);
 
   return (
-    <div 
-    style = {{ display: "flex", flexFlow: "column", justifyContent: "center", alignItems: "center",}}>{/* esto es un comentario*/}
-      <h1 >Hello StackBlitz!</h1>
-      <p>:p</p>
-      <Car marca = "Corvette C6" imagen="https://static.retail.autofact.cl/blog/c_img_740x370.s12ttab8kzre30dn.jpg"
-      Descripcion ="rojo y rapido" sonido= "KuChao"/>
-      <Car marca = "Chevrolet L-170"imagen="https://i.pinimg.com/474x/91/2e/d4/912ed4ffcee5c4e018f7ad412cfac861.jpg"
-      Descripcion ="Viejo y amable" sonido= "Mate To-Mate" anio="1960"/>
-      <Car/>
+    <div
+      style={{
+        display: 'flex',
+        flexFlow: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {
+        //dibujar por cada personaje en la lista de personajes un componente Car.
+        personajes.map((personaje) => (
+          <Car
+            nombre={personaje.nombre}
+            modelo={personaje.modelo}
+            imagen={personaje.imagen}
+            descripcion={personaje.descripcion}
+            sonido={personaje.sonido}
+            anio={personaje.anio}
+          />
+        ))
+      }
+
     </div>
   );
 }

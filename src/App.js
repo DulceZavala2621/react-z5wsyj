@@ -8,7 +8,7 @@ export default function App() {
     {
       nombre: 'Rayo McQueen',
       modelo: 'Chevrolet Corvette C6 de NASCAR',
-      imagen: 'https://static.retail.autofact.cl/blog/c_img_740x370.s12ttab8kzre30dn.jpg',
+      imagen: 'https://i.ytimg.com/vi/2gRcvS2ltjE/maxresdefault.jpg',
       descripcion: 'El auto mas veloz de la serie de peliculas de Cars.',
       sonido: 'KuChao',
       anio: '2006',
@@ -16,8 +16,7 @@ export default function App() {
     {
       nombre: 'Mate',
       modelo: 'International L-170',
-      imagen:
-        'https://i.pinimg.com/474x/91/2e/d4/912ed4ffcee5c4e018f7ad412cfac861.jpg',
+      imagen:'https://www.venta-de.com.ve/sh-img/latest_grua%2Bmate%2Bcars.jpeg',
       descripcion: 'El Compañero fiel del auto veloz de la pelicula Cars.',
       sonido: 'Mate To-Mate',
       anio: '1960',
@@ -31,7 +30,8 @@ export default function App() {
   useEffect(() => {
     //TODO: Aquí iria la petición a la API utilizando FETCH y se asignaría la respuesta de la API a la variable personajesDesdeAPI, algo como esto:
     // personajesDesdeAPI = fetch("http://personajesdecars.com/all")
-    
+   // https://static.retail.autofact.cl/blog/c_img_740x370.s12ttab8kzre30dn.jpg
+   //https://i.pinimg.com/474x/91/2e/d4/912ed4ffcee5c4e018f7ad412cfac861.jpg
     //Se actualiza la variable de estado 'personajes' con los datos recuperados.
     setPersonajes(personajesDesdeAPI);
   }, []);

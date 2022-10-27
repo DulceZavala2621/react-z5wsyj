@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './car.css';
 
 export default function Car(props) {
@@ -14,7 +14,7 @@ export default function Car(props) {
   //https://github.com/fjml1983/react-intro/blob/main/src/Car.js
 
   const estiloDivCardContenedor = {
-    padding: '0px 16px 16px',
+    padding: '0px 25px 25px',
   };
   const hacerBeep = (sonido) => {
     setBeppeando(!beepeando);

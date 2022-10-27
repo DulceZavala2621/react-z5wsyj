@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect }  from "react";
 import "./style.css";
 import Car from './car/Car.js'
 
